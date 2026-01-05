@@ -5,98 +5,161 @@
 <title>Royal Fashion | Luxury Lifestyle</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#000;color:#fff}
-header{padding:30px;text-align:center;border-bottom:1px solid #333}
-header h1{margin:0;font-size:36px;letter-spacing:2px}
-header p{color:gold;font-size:16px;margin-top:5px}
-.hero{padding:60px 20px;text-align:center}
-.hero h2{font-size:28px;margin-bottom:15px}
-.hero a{background:gold;color:#000;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:30px}
-.section{padding:40px 20px}
-.section h3{text-align:center;font-size:26px;margin-bottom:30px;color:gold}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#111;padding:20px;border-radius:15px;text-align:center}
-.card h4{margin:10px 0}
-.price{color:gold;font-size:18px;margin-bottom:10px}
-.card a{display:inline-block;margin-top:10px;background:gold;color:#000;padding:10px 20px;text-decoration:none;border-radius:20px}
-footer{padding:30px;text-align:center;border-top:1px solid #333}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:gold;color:#000;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold}
+body {
+  margin:0;
+  font-family: 'Arial', sans-serif;
+  background:#111;
+  color:#fff;
+}
+header {
+  text-align:center;
+  padding:30px 0;
+  background: linear-gradient(90deg, #f9ce34, #ee2a7b);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+header h1 { color:#fff; font-size:40px; margin:0; letter-spacing:2px;}
+header p { font-size:18px; margin-top:5px; color:#000;}
+.hero { text-align:center; padding:60px 20px;}
+.hero h2 { font-size:28px; margin-bottom:15px;}
+.hero a {
+  display:inline-block; margin-top:10px; padding:15px 30px; background:gold; color:#000;
+  text-decoration:none; font-weight:bold; border-radius:30px; transition:0.3s;
+}
+.hero a:hover { background:#ffd700; transform:scale(1.05); }
+
+.section { padding:40px 20px; text-align:center; }
+.section h3 { font-size:26px; margin-bottom:30px; color:gold; }
+
+/* Carousel */
+.carousel { position:relative; overflow:hidden; max-width:100%; margin:auto; }
+.carousel-track {
+  display:flex; transition:transform 0.3s ease-in-out;
+}
+.card {
+  min-width:250px; margin:0 10px; background:#222; border-radius:15px; padding:20px; text-align:center;
+  flex-shrink:0; transition:0.3s;
+}
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+.card h4 { margin:10px 0; }
+.card .price { color:gold; font-size:18px; margin-bottom:10px;}
+.card a {
+  display:inline-block; margin-top:10px; padding:10px 20px; background:gold; color:#000;
+  text-decoration:none; border-radius:25px; font-weight:bold; transition:0.3s;
+}
+.card a:hover { background:#ffd700; }
+
+/* Carousel buttons */
+.prev, .next {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(255,255,255,0.5); color:#000; border:none; padding:10px; border-radius:50%;
+  cursor:pointer; font-weight:bold; font-size:18px;
+}
+.prev { left:10px; } .next { right:10px; }
+.prev:hover, .next:hover { background:gold; color:#000; }
+
+/* Instagram Follow Section */
+.new-section { margin:30px; text-align:center;}
+.new-section a {
+  display:inline-block;
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+  color:white; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold;
+  transition:0.3s;
+}
+.new-section a:hover { opacity:0.8; }
+
+/* Store Highlights */
+.box { margin:10px 0; font-weight:bold; }
+
+/* Footer */
+footer { text-align:center; padding:30px; border-top:1px solid #333; }
+
+/* WhatsApp Floating Button */
+.whatsapp {
+  position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff;
+  padding:15px 20px; border-radius:50px; text-decoration:none; font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.5); transition:0.3s;
+}
+.whatsapp:hover { transform:scale(1.1); }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>ROYAL FASHION</h1>
-<p>Luxury Lifestyle</p>
+  <h1>ROYAL FASHION</h1>
+  <p>Luxury Lifestyle</p>
 </header>
 
 <div class="hero">
-<h2>Premium Retail Fashion Store</h2>
-<a href="https://wa.me/917726897990">Order on WhatsApp</a>
+  <h2>Premium Retail Fashion Store</h2>
+  <a href="https://wa.me/917726897990">Order on WhatsApp</a>
 </div>
 
 <div class="section">
-<h3>Our Products</h3>
-<div class="products">
-
-<div class="card">
-<h4>Men’s Cargo Jeans</h4>
-<div class="price">₹750</div>
-<a href="https://wa.me/917726897990">Order Now</a>
-</div>
-
-<div class="card">
-<h4>Girls Party Wear Frock</h4>
-<div class="price">₹400</div>
-<a href="https://wa.me/917726897990">Order Now</a>
-</div>
-
-<div class="card">
-<h4>Kids Cargo Pants</h4>
-<div class="price">₹600</div>
-<a href="https://wa.me/917726897990">Order Now</a>
-</div>
-
-<div class="card">
-<h4>Kids Flower Dress</h4>
-<div class="price">₹500</div>
-<a href="https://wa.me/917726897990">Order Now</a>
-</div>
-
-</div>
-</div>
-  <div class="section">
-  <div class="box">✔ Trusted Retail Store</div>
-  <div class="box">✔ Quality Checked Products</div>
-  <div class="box">✔ Easy WhatsApp Ordering</div>
-</div>
-<div style="margin:30px;">
-<a href="https://instagram.com/" target="_blank"
-style="
-display:inline-block;
-background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
-color:white;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-">
-Follow on Instagram
-</a>ram__prajapat__ll9ll
-</div>
-  <div class="section">
-  <div class="box">✔ Trusted Retail Store</div>
-  <div class="box">✔ Quality Checked Products</div>
-  <div class="box">✔ Easy WhatsApp Ordering</div>
+  <h3>Our Products</h3>
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <div class="card">
+        <h4>Men's Cargo Jeans</h4>
+        <div class="price">₹750</div>
+        <a href="https://wa.me/917726897990">Order Now</a>
+      </div>
+      <div class="card">
+        <h4>Girls Party Wear Frock</h4>
+        <div class="price">₹400</div>
+        <a href="https://wa.me/917726897990">Order Now</a>
+      </div>
+      <div class="card">
+        <h4>Kids Cargo Pants</h4>
+        <div class="price">₹600</div>
+        <a href="https://wa.me/917726897990">Order Now</a>
+      </div>
+      <div class="card">
+        <h4>Kids Flower Dress</h4>
+        <div class="price">₹500</div>
+        <a href="https://wa.me/917726897990">Order Now</a>
+      </div>
+    </div>
+    <button class="next">&#10095;</button>
   </div>
+</div>
+
+<!-- Instagram Follow Section -->
+<div class="new-section">
+  <h3>Follow us on Instagram</h3>
+  <a href="https://instagram.com/yourhandle" target="_blank">Follow Now</a>
+</div>
+
+<!-- Store Highlights Section -->
+<div class="section">
+  <div class="box">✔ Trusted Retail Store</div>
+  <div class="box">✔ Quality Checked Products</div>
+  <div class="box">✔ Easy WhatsApp Ordering</div>
+</div>
+
 <footer>
-<p>📍 BH Road, Gauribidanur</p>
-<p>📞 7726897990</p>
-<p>Retail Fashion Store</p>
+  <p>📍 BH Road, Gauribidanur</p>
+  <p>📞 7726897990</p>
+  <p>Retail Fashion Store</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/917726897990">WhatsApp</a>
 
+<script>
+const track = document.querySelector('.carousel-track');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let index = 0;
+
+prev.addEventListener('click', () => {
+  index = Math.max(index - 1, 0);
+  track.style.transform = `translateX(-${index * 270}px)`;
+});
+next.addEventListener('click', () => {
+  index = Math.min(index + 1, track.children.length - 1);
+  track.style.transform = `translateX(-${index * 270}px)`;
+});
+</script>
+
 </body>
-</html>"
+</html>
